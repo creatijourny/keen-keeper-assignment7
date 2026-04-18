@@ -11,8 +11,8 @@ const YourFriends = () => {
 
     return (
         <div className='container mx-auto my-[60px]'>
-            <h2 className='text-3xl font-semibold text-[#1F2937]'>Your Friends</h2>
-            <h3 className='font-semibold'>Total Friends: {friends.length};</h3>
+            <h2 className='text-3xl font-semibold text-[#1F2937] mb-5'>Your Friends</h2>
+            
             {loading ? (<div className='flex justify-center items-center'><PulseLoader color="#0d6a32"/></div>) 
             : (<div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
                 {

@@ -8,6 +8,8 @@ import Homepage from './homepage/Homepage'
 import Timeline from './components/timeline/Timeline'
 import Stats from './components/stats/Stats'
 import YourFriends from './components/Homepage/YourFriends'
+import FriendDetails from './pages/FriendDetails'
+
 
 
 const router = createBrowserRouter(
@@ -18,18 +20,16 @@ const router = createBrowserRouter(
       children: [
         {
           path: "/",
-          element: <Homepage />,
-          loader: ()=> fetch("/friends.json"),
+          element: <Homepage />,          
         },
         {
           path: "/yourfriends",
-          element: <YourFriends />,
-          
+          element: <YourFriends />,          
         },
         {
-          path: "/friends",
-          element: <h2>Friends</h2>,
-        },
+          path: "/friendDetails/:id",
+          element: <FriendDetails />,
+        },        
         {
           path: "/timeline",
           element: <Timeline />,

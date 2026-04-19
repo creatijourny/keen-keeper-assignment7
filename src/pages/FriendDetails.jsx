@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { FiPhoneCall } from 'react-icons/fi';
 import { HiOutlineArchive } from 'react-icons/hi';
 import { HiOutlineBellSnooze } from 'react-icons/hi2';
 import { MdOutlineTextsms, MdOutlineVideocam } from 'react-icons/md';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
-
-
+import { FriendContext } from '../context/FriendContext';
 
 
 
@@ -16,12 +15,18 @@ const FriendDetails = () => {
   // console.log(friendId, "friendId");
   // console.log(friends, loading);
   const friends = useLoaderData();
+
   const seekFriend = friends.find(friend => friend.id == id);
-  console.log(seekFriend);
+  // console.log(seekFriend);
   const { name, picture, email, day_since_contact,
     status, tags, bio, goal, next_due_date } = seekFriend;
 
+    const {handleCallAFriend, callFriend} = useContext(FriendContext);
+    const {handleTextAFriend, textFriend} = useContext(FriendContext);
+    const {handleVideoCall, videoCall} = useContext(FriendContext);
 
+    // console.log(handleCallAFriend, callFriend, "handleCallAFriend");
+    
   return (
     <div className="card lg:card-side container mx-auto shadow-sm flex justify-between items-center gap-3 mt-5">
       <div className='w-full p-8'>
@@ -82,13 +87,13 @@ const FriendDetails = () => {
           <h3 className='mb-3'>Quick Check-In</h3>
           <div className='flex justify-between items-center gap-5'>
             <div>
-              <button className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><FiPhoneCall className='text-xl shrink-0' /><span>Call</span></button>
+              <button onClick={()=> handleCallAFriend(seekFriend)} className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><FiPhoneCall className='text-xl shrink-0' /><span>Call</span></button>
             </div>
             <div>
-              <button className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><MdOutlineTextsms className='text-xl shrink-0' /><span>Text</span></button>
+              <button onClick={()=> handleTextAFriend(seekFriend)} className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><MdOutlineTextsms className='text-xl shrink-0' /><span>Text</span></button>
             </div>
             <div>
-              <button className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><MdOutlineVideocam className='text-2xl shrink-0' /><span>Video</span></button>
+              <button onClick={()=> handleVideoCall(seekFriend)} className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><MdOutlineVideocam className='text-2xl shrink-0' /><span>Video</span></button>
             </div>
             
           </div>

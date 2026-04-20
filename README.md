@@ -1,4 +1,4 @@
-# Friends Connect React Project
+# Keen Keeper: React Project
 
 ## Overview
 

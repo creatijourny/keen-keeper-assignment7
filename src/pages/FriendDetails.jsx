@@ -6,7 +6,7 @@ import { MdOutlineTextsms, MdOutlineVideocam } from 'react-icons/md';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { useLoaderData, useParams } from 'react-router';
 import { FriendContext } from '../context/FriendContext';
-
+import { toast } from 'react-toastify';
 
 
 const FriendDetails = () => {
@@ -15,16 +15,15 @@ const FriendDetails = () => {
   // console.log(friendId, "friendId");
   // console.log(friends, loading);
   const friends = useLoaderData();
+  
 
   const seekFriend = friends.find(friend => friend.id == id);
-  // console.log(seekFriend);
+   // console.log(seekFriend);
   const { name, picture, email, day_since_contact,
-    status, tags, bio, goal, next_due_date } = seekFriend;
+    status, tags, bio, goal, next_due_date } = seekFriend;    
 
-    const {handleCallAFriend} = useContext(FriendContext);
-    const {handleTextAFriend} = useContext(FriendContext);
-    const {handleVideoCall} = useContext(FriendContext);
-
+    const { handleCallAFriend, handleTextAFriend, handleVideoCall } = useContext(FriendContext);
+    
     // console.log(handleCallAFriend, callFriend, "handleCallAFriend");
     
   return (

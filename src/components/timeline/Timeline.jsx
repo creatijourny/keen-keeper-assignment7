@@ -26,6 +26,11 @@ const Timeline = () => {
             ? allTimeline
             : allTimeline.filter(item => item.type === filterType);
 
+    if(filteredData.length === 0){
+        return <div>
+            <h2 className='text-3xl font-bold text-center text-red-500 pt-7 my-10'>No Timeline data found.</h2>
+        </div>
+    }
 
     return (
         <div className='container mx-auto my-10 space-y-5'>

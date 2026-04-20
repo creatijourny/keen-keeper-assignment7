@@ -7,9 +7,9 @@ import MyNavLink from './MyNavLink';
 const Navbar = () => {
     return (
         <div className='bg-[#FFFFFF] shadow-sm'>
-            <nav className='container mx-auto flex justify-between items-center'>
+            <nav className='container mx-auto flex flex-col md:flex-row md:justify-between items-center'>
                 <div>
-                    <h2 className='text-2xl font-bold'>Keen<span className='text-[#244D3F]'>Keeper</span></h2>
+                    <h2 className='text-3xl font-bold'>Keen<span className='text-[#244D3F]'>Keeper</span></h2>
                 </div>
                 <ul className='flex justify-between gap-1 items-center my-2'>
                     <li>                       

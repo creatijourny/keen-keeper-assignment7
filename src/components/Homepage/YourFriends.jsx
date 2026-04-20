@@ -2,6 +2,7 @@ import React from 'react';
 import FriendsCard from '../ui/FriendsCard';
 import { PulseLoader } from 'react-spinners';
 import useFriends from '../../hooks/useFriends';
+import { toast } from 'react-toastify';
 
 
 const YourFriends = () => {
@@ -20,6 +21,7 @@ const YourFriends = () => {
                     return (
                       <FriendsCard friend={friend} key={index}/>
                     )
+                    
                 })
             }
             </div>)}

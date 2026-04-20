@@ -12,7 +12,7 @@ import FriendDetails from './pages/FriendDetails'
 import FriendProvider from './context/FriendContext'
 import FriendContext from './context/FriendContext'
 import { ToastContainer } from 'react-toastify'
-
+import ErrorPage from './pages/errorPage/ErrorPage'
 
 
 const router = createBrowserRouter(
@@ -43,7 +43,8 @@ const router = createBrowserRouter(
           element: <Stats />,
         }
 
-      ]
+      ],
+      errorElement: <ErrorPage />
     },
 
   ]

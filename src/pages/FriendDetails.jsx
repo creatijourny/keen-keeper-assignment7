@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { FiPhoneCall } from 'react-icons/fi';
 import { HiOutlineArchive } from 'react-icons/hi';
 import { HiOutlineBellSnooze } from 'react-icons/hi2';
@@ -21,9 +21,9 @@ const FriendDetails = () => {
   const { name, picture, email, day_since_contact,
     status, tags, bio, goal, next_due_date } = seekFriend;
 
-    const {handleCallAFriend, callFriend} = useContext(FriendContext);
-    const {handleTextAFriend, textFriend} = useContext(FriendContext);
-    const {handleVideoCall, videoCall} = useContext(FriendContext);
+    const {handleCallAFriend} = useContext(FriendContext);
+    const {handleTextAFriend} = useContext(FriendContext);
+    const {handleVideoCall} = useContext(FriendContext);
 
     // console.log(handleCallAFriend, callFriend, "handleCallAFriend");
     

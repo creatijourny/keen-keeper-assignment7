@@ -1,16 +1,60 @@
-# React + Vite
+# Keen Keeper: React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Keen Keeper is a React-based web application for managing friends data, viewing profiles and tracking interactions. The project focuses on clean UI, multi-page navigation and responsive design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+* View and manage friends data;
+* Keep record of interactions with friends;
+* Responsive UI;
+* PieChart with interaction data;
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+* **React** – Frontend library for building UI;
+* **React Router** – Page navigation and routing;
+* **Tailwind CSS** – Utility-first styling;
+* **DaisyUI** – Prebuilt Tailwind UI components;
+* **React Icons** – Icon library;
+* **Recharts** – Data visualization and charts;
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Functionalities
+
+### Friends Data
+
+* Name
+* Id
+* Picture
+* Email
+* day_since_contact
+* Tags
+* Bio
+
+### Interactions
+
+* Voice Call
+* Messages
+* Video Call
+
+## UI Libraries Used
+
+### DaisyUI Components
+
+* Navbar
+* Cards
+* Buttons
+
+### React Icons
+
+Used for:
+
+* Navigation icons
+* Social icons
+* Action buttons
+
+## Author
+
+Created with React and modern frontend tools.

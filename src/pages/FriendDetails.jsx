@@ -15,17 +15,17 @@ const FriendDetails = () => {
   // console.log(friendId, "friendId");
   // console.log(friends, loading);
   const friends = useLoaderData();
-  
+
 
   const seekFriend = friends.find(friend => friend.id == id);
-   // console.log(seekFriend);
+  // console.log(seekFriend);
   const { name, picture, email, day_since_contact,
-    status, tags, bio, goal, next_due_date } = seekFriend;    
+    status, tags, bio, goal, next_due_date } = seekFriend;
 
-    const { handleCallAFriend, handleTextAFriend, handleVideoCall } = useContext(FriendContext);
-    
-    // console.log(handleCallAFriend, callFriend, "handleCallAFriend");
-    
+  const { handleCallAFriend, handleTextAFriend, handleVideoCall } = useContext(FriendContext);
+
+  // console.log(handleCallAFriend, callFriend, "handleCallAFriend");
+
   return (
     <div className="card lg:card-side container mx-auto shadow-sm flex justify-between items-center gap-3 mt-5">
       <div className='w-full p-8'>
@@ -54,9 +54,9 @@ const FriendDetails = () => {
             <p>Preferred {email}</p>
           </div>
           <div className='px-7 space-y-4'>
-            <button className='btn w-full bg-[#FFFFFF]'><HiOutlineBellSnooze className='text-xl'/> Snooze 2 Weeks</button>
-            <button className='btn w-full bg-[#FFFFFF]'><HiOutlineArchive className='text-xl'/> Archive</button>
-            <button className='btn w-full bg-[#FFFFFF] text-red-500'><RiDeleteBin6Line className='text-xl'/> Delete</button>
+            <button className='btn w-full bg-[#FFFFFF]'><HiOutlineBellSnooze className='text-xl' /> Snooze 2 Weeks</button>
+            <button className='btn w-full bg-[#FFFFFF]'><HiOutlineArchive className='text-xl' /> Archive</button>
+            <button className='btn w-full bg-[#FFFFFF] text-red-500'><RiDeleteBin6Line className='text-xl' /> Delete</button>
           </div>
         </div>
       </div>
@@ -86,15 +86,15 @@ const FriendDetails = () => {
           <h3 className='mb-3'>Quick Check-In</h3>
           <div className='flex justify-between items-center gap-5'>
             <div>
-              <button onClick={()=> handleCallAFriend(seekFriend)} className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><FiPhoneCall className='text-xl shrink-0' /><span>Call</span></button>
+              <button onClick={() => handleCallAFriend(seekFriend)} className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><FiPhoneCall className='text-xl shrink-0' /><span>Call</span></button>
             </div>
             <div>
-              <button onClick={()=> handleTextAFriend(seekFriend)} className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><MdOutlineTextsms className='text-xl shrink-0' /><span>Text</span></button>
+              <button onClick={() => handleTextAFriend(seekFriend)} className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><MdOutlineTextsms className='text-xl shrink-0' /><span>Text</span></button>
             </div>
             <div>
-              <button onClick={()=> handleVideoCall(seekFriend)} className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><MdOutlineVideocam className='text-2xl shrink-0' /><span>Video</span></button>
+              <button onClick={() => handleVideoCall(seekFriend)} className='btn px-20 py-10 flex flex-col items-center justify-center gap-1'><MdOutlineVideocam className='text-2xl shrink-0' /><span>Video</span></button>
             </div>
-            
+
           </div>
         </div>
       </div>
